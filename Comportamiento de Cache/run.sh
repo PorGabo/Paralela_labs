@@ -13,6 +13,9 @@ g++ -std=c++17 clasica_simple.cpp -o clasica_simple.exe
 g++ -std=c++17 bloques_simple.cpp -o bloques_simple.exe
 ./bloques_simple.exe
 
+valgrind --tool=cachegrind --cachegrind-out-file=clasica.cg ./clasica_simple.exe
+valgrind --tool=cachegrind --cachegrind-out-file=clasica.cg ./bloques_simple.exe
+
 kcachegrind clasica.cg
 kcachegrind bloques.cg
 
